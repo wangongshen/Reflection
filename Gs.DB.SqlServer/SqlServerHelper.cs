@@ -72,5 +72,11 @@ namespace Gs.DB.SqlServer
             }
             return (T)oObject;
         }
+
+
+        public void Say()
+        {
+            Console.WriteLine("调用ReflectionTest中的Say方法");
+        }
     }
 }

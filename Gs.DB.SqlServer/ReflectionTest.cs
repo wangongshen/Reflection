@@ -26,12 +26,12 @@ namespace Gs.DB.SqlServer
         /// <param name="name"></param>
         public ReflectionTest(string name)
         {
-            Console.WriteLine("这里是{0} 有参数构造函数", this.GetType());
+            Console.WriteLine("这里是{0} 有参数构造函数", name);
         }
 
         public ReflectionTest(int id)
         {
-            Console.WriteLine("这里是{0} 有参数构造函数", this.GetType());
+            Console.WriteLine("这里是{0} 有参数构造函数", id);
         }
         #endregion
 
@@ -50,7 +50,7 @@ namespace Gs.DB.SqlServer
         public void Show2(int id)
         {
 
-            Console.WriteLine("这里是{0}的Show2", this.GetType());
+            Console.WriteLine("这里Show2，参数是{0}", id);
         }
         /// <summary>
         /// 重载方法之一
@@ -59,7 +59,7 @@ namespace Gs.DB.SqlServer
         /// <param name="name"></param>
         public void Show3(int id, string name)
         {
-            Console.WriteLine("这里是{0}的Show3", this.GetType());
+            Console.WriteLine("调用参数为id、name的show3方法，参数为：{0}、{1}", id, name);
         }
         /// <summary>
         /// 重载方法之二
@@ -68,7 +68,7 @@ namespace Gs.DB.SqlServer
         /// <param name="id"></param>
         public void Show3(string name, int id)
         {
-            Console.WriteLine("这里是{0}的Show3_2", this.GetType());
+            Console.WriteLine("调用参数为id、name的show3方法，参数为：{0}、{1}", id,name);
         }
         /// <summary>
         /// 重载方法之三
@@ -76,8 +76,7 @@ namespace Gs.DB.SqlServer
         /// <param name="id"></param>
         public void Show3(int id)
         {
-
-            Console.WriteLine("这里是{0}的Show3_3", this.GetType());
+            Console.WriteLine("调用参数为id的show3方法，参数为：{0}",id);
         }
         /// <summary>
         /// 重载方法之四
@@ -85,8 +84,7 @@ namespace Gs.DB.SqlServer
         /// <param name="name"></param>
         public void Show3(string name)
         {
-
-            Console.WriteLine("这里是{0}的Show3_4", this.GetType());
+            Console.WriteLine("调用参数为name的show3方法，参数为：{0}", name);
         }
         /// <summary>
         /// 重载方法之五
@@ -94,7 +92,7 @@ namespace Gs.DB.SqlServer
         public void Show3()
         {
 
-            Console.WriteLine("这里是{0}的Show3_1", this.GetType());
+            Console.WriteLine("这是无参方法Show3()");
         }
         /// <summary>
         /// 私有方法
@@ -102,7 +100,7 @@ namespace Gs.DB.SqlServer
         /// <param name="name"></param>
         private void Show4(string name)
         {
-            Console.WriteLine("这里是{0}的Show4", this.GetType());
+            Console.WriteLine("调用参数为name的Show4方法，参数为：{0}", name);
         }
         /// <summary>
         /// 静态方法
@@ -110,7 +108,7 @@ namespace Gs.DB.SqlServer
         /// <param name="name"></param>
         public static void Show5(string name)
         {
-            Console.WriteLine("这里是{0}的Show5", typeof(ReflectionTest));
+            Console.WriteLine("调用参数为name的Show5方法，参数为：{0}", name);
         }
         #endregion
     }

@@ -12,5 +12,7 @@ namespace Gs.DB.Interface
     public interface IDBHelper
     {
         void Query();
+
+        void Say();
     }
 }
